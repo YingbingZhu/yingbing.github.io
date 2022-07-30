@@ -45,7 +45,7 @@ paginate_path: blog/page:num # jekyll-paginate > blog page
 social: # jekyll-seo-tag > social overrides
   name: Yingbing Zhu # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
-    - https://www.linkedin.com/in/daviddarnes
+#     - https://www.linkedin.com/yingbingzhu
     - https://github.com/yingbingzhu
 # markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
@@ -57,7 +57,7 @@ sass:
   style: compressed # Style compression
 permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Europe/London # Timezone for blog posts and alike
+# timezone:  # Timezone for blog posts and alike
 
 # 5. Collections
 collections:
@@ -90,9 +90,9 @@ defaults:
 encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "Yingbing Zhu" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
+# logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "I am a data engineer and learning to be a software engineer." # Site description and default description, also used in jekyll-seo-tag
-baseurl: "yingbing.github.io"
+baseurl: "https://yingbingzhu.github.io/yingbing.github.io"
 email: "yingbing.zhu@hotmail.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
