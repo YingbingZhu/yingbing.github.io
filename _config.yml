@@ -92,7 +92,7 @@ lang: en-GB # Set the site language
 title: "Yingbing Zhu" # Site name or title, also used in jekyll-seo-tag
 # logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "I am a data engineer and learning to be a software engineer." # Site description and default description, also used in jekyll-seo-tag
-baseurl: "https://yingbingzhu.github.io/yingbing.github.io"
+baseurl: "yingbing.github.io"
 email: "yingbing.zhu@hotmail.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
