@@ -1,6 +1,6 @@
 b. 只通过几个支持向量就确定了超平面，说明它不在乎细枝末节，所以不容易过拟合，但不能确保一定不会过拟合。可以处理复杂的非线性问题。 
 d. 缺点：计算量大 
-![这里写图片描述](resources/E6F7B801BF00D6DB9A6A07D0E2E58F37.png)
+![这里写图片描述](机器学习/resources/E6F7B801BF00D6DB9A6A07D0E2E58F37.png)
 
 它的基本模型是定义在特征空间上的能够正确划分训练数据集并且几何间隔最大的线性分类器。支持向量机还包括核技巧，这使它成为实质上的非线性分类器。支持向量机的学习策略就是间隔最大化，可形式化为一个求解凸二次规划的问题,支持向量机的学习算法是求解凸二次规划的最优化算法。
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -14,46 +14,46 @@ d. 缺点：计算量大
 {W′→Xi→+b≥+1,yi=+1W′→Xi→+b≤−1,yi=−1}
 W′X
 
-![](resources/9BB94AB240C003CDA241D834142C8A3E.png) w的L2范数
+![](机器学习/resources/9BB94AB240C003CDA241D834142C8A3E.png) w的L2范数
 
-![](resources/3A80BA51E9133DFE156ABBA83296B14B.jpg)
+![](机器学习/resources/3A80BA51E9133DFE156ABBA83296B14B.jpg)
 
 函数间隔（functional margin）:
 ------------------------
 
-![](resources/B9343F66ACF14138C757D8F9CF42E42C.png)
+![](机器学习/resources/B9343F66ACF14138C757D8F9CF42E42C.png)
 
 几何间隔（geometric margin）:
 -----------------------
 
-![](resources/AC0979127A5F636BA539E666CF04D8DB.png)
+![](机器学习/resources/AC0979127A5F636BA539E666CF04D8DB.png)
 
 （2）对偶问题：引入拉格朗日乘子，可以得到以下拉格朗日函数:
 ------------------------------
 
-![](resources/4DA7B001D0C0E9F0B45C61F1C16F0BB4.jpg)
+![](机器学习/resources/4DA7B001D0C0E9F0B45C61F1C16F0BB4.jpg)
 
-![](resources/04238DE6A0410699110236BBA0BC505D.png)
+![](机器学习/resources/04238DE6A0410699110236BBA0BC505D.png)
 
 求导：
 
-![](resources/43FC5BB4C525A98F2F6427CFFC83CEBA.png)
+![](机器学习/resources/43FC5BB4C525A98F2F6427CFFC83CEBA.png)
 
 将上式代入拉格朗日函数：
 
-![](resources/16354B7177C391466EBB4B12375196A3.png)
+![](机器学习/resources/16354B7177C391466EBB4B12375196A3.png)
 
 由于对偶问题的性质，最小变为最大，求W的极值即可：
 
-![](resources/0259055D9346C2A3D98CAC51642D5B93.png)
+![](机器学习/resources/0259055D9346C2A3D98CAC51642D5B93.png)
 
-￼![](resources/50661625F105678F3CAB8DFBCA16CADD.jpg)
+￼![](机器学习/resources/50661625F105678F3CAB8DFBCA16CADD.jpg)
 
-![](resources/ED574F5C21A6F0848A4066A9932E54A2.jpg)
+![](机器学习/resources/ED574F5C21A6F0848A4066A9932E54A2.jpg)
 
 从KKT条件中得到，只有支持向量的不为0，其他情况的都为0.那么来一个新样本x后，就可以这样分类：
 
- ![](resources/695CD4367564C1371775E9CD8E553134.png)
+ ![](机器学习/resources/695CD4367564C1371775E9CD8E553134.png)
 
 为什么要转为对偶问题？
 -----------
@@ -69,27 +69,27 @@ W′X
 
 解决方法：允许某些样本不满足约束:
 
-![](resources/C25E15B8BFC0EF53BB88D2D723F04D83.png)
+![](机器学习/resources/C25E15B8BFC0EF53BB88D2D723F04D83.png)
 
-![](resources/C675870819ADF4C082645CDD8E8C2750.png)
+![](机器学习/resources/C675870819ADF4C082645CDD8E8C2750.png)
 
 新模型：
 
-![](resources/616E3CCDA0B0AA26987B18DCFA70DB70.png)
+![](机器学习/resources/616E3CCDA0B0AA26987B18DCFA70DB70.png)
 
 解释：引入松弛变量后，就允许某些样本点的函数间隔小于1，即在最大间隔区间里面，或者函数间隔是负数，即样本点在对方的区域中。C是离群点的权重，值越大说明离群点对目标函数影响越大，这时候间隔就会很小。
 
 相应的对偶问题求解：
 
-![](resources/5E9243581E70D1D948BB9E4104CC64CA.png)
+![](机器学习/resources/5E9243581E70D1D948BB9E4104CC64CA.png)
 
 求导：
 
-![](resources/B361292D3804E1066D8AB8EC43574526.png)
+![](机器学习/resources/B361292D3804E1066D8AB8EC43574526.png)
 
 带入得到对偶优化问题（发现与之前模型只多了一个小于等于C的限制条件）：
 
-![](resources/5AC0EEE3DA9D618B78A266C321953633.png)
+![](机器学习/resources/5AC0EEE3DA9D618B78A266C321953633.png)
 
 (4)核函数
 ======
@@ -98,13 +98,13 @@ W′X
 
 解决方法：常用的一般是径向基RBF函数（线性核，高斯核，拉普拉斯核等）。
 
-![](resources/7C48FB1F920C4C191083971DCD3BBA8D.png)
+![](机器学习/resources/7C48FB1F920C4C191083971DCD3BBA8D.png)
 
-![](resources/E57F406ECBD6F3D46BF647B244ADF850.png)
+![](机器学习/resources/E57F406ECBD6F3D46BF647B244ADF850.png)
 
 优点：避免了高维空间的计算，计算核函数的复杂度和计算原始样本内积的复杂度没有实质性的增加。
 
-![](resources/44A6784F3049289A62410E8F07021116.jpg)
+![](机器学习/resources/44A6784F3049289A62410E8F07021116.jpg)
 
 （5）多分类
 
@@ -124,11 +124,11 @@ W′X
 
 过程：
 
-![](resources/BF13E3296F3F8BF1639B9DF081BA983E.png)
+![](机器学习/resources/BF13E3296F3F8BF1639B9DF081BA983E.png)
 
 常见问题：
 
-![](resources/C8921FB61636DD6FC55FCA34F939D492.png)
+![](机器学习/resources/C8921FB61636DD6FC55FCA34F939D492.png)
 
 (7)总结：
 
